@@ -1,0 +1,35 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+	<div class="form-group">
+		<img class="img" th:src="${!#strings.isEmpty(superhero.avatar) ? superhero.avatar : '/img/superhero.png'}" />
+	</div>
+	
+	<div class="form-group">
+		<label>Name</label>
+		<span class="h2 d-block">
+			<span th:text="${superhero.name}" ></span>
+		</span>
+	</div>
+
+	<div class="form-group">
+		<label>Squad</label>
+		<span class="d-block">
+			<span th:text="${superhero.squad}" ></span>
+		</span>
+	</div>
+
+	<div class="form-group">
+		<label>Type</label>
+		<span class="d-block">
+			<span th:if="${superhero.type!=null}" th:text="${superhero.type ? 'Villain' : 'Hero'}" class="type"></span>
+		</span>
+	</div>
+
+
+
+	<div class="form-group">
+		<label for="description">About</label>
+		<p id="description" th:text="${superhero.description}"></p>
+	</div>
+
+</div>

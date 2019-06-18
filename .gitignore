@@ -1,3 +1,10 @@
+build/
+target/
+bin/
+
+dpush.bat
+dbuild.bat
+
 # Compiled class file
 *.class
 

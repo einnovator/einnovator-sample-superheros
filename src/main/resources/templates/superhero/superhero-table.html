@@ -1,0 +1,33 @@
+<table  id="table" class="table"  xmlns:th="http://www.thymeleaf.org"  th:attr="data-page=${pageJson}">
+	<tr>
+		<th style="width: 2em"></th>
+		<th style="width: 40px"></th>
+		<th>Name</th>
+		<th>Squad</th>
+		<th>Type</th>
+		<th style="width: 4em"></th>
+	</tr>
+
+	
+	<tr th:each="superhero: ${superheros}">
+		<td></td>
+		<td  style="width: 40px">
+			<a th:href="${'/superhero/'+superhero.uuid}">
+				<img class="avatar" th:src="${!#strings.isEmpty(superhero.avatar) ? superhero.avatar : links.cdn + '/img/avatar.png'}" />
+			</a>		
+		</td>
+		<td>
+			<a th:href="${'/superhero/'+superhero.uuid}" class="bold">
+				<span class="s" th:text="${superhero.name}"></span>
+			</a>
+		</td>
+		<td>
+			<span th:if="${superhero.squad!=null}" th:text="${superhero.squad.displayValue}" class="squad"></span>
+		</td>
+		<td>
+			<span th:if="${superhero.type!=null}" th:text="${superhero.type ? 'Villain' : 'Hero'}" class="type"></span>
+		</td>
+		<td></td>
+	</tr>		
+	
+</table>

@@ -1,0 +1,19 @@
+<header class="header" xmlns:th="http://www.thymeleaf.org">
+	<nav>
+		<div class="col-header logo-box">
+			<i class="fas fa-film ico-lg"></i>
+			<h3 class="header-title">Movies DB</h3>
+		</div>
+		<div class="col-header col-menu">
+			<div th:replace="layout/menu-main"></div>
+		</div>
+		<div class="col-header col-toolbar">
+			<div th:replace="layout/header-toolbar"></div>
+		</div>
+		<div  class="col-header col-user-info">
+			<div th:replace="layout/user-dropdown"></div>
+		</div>
+	</nav>
+	<form id="form-logout" th:action="@{/logout}" method="post" style="display: none"></form>
+
+</header>

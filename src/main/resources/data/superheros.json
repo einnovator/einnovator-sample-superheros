@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Spider-Man",
+        "squad": "Marvel",
+        "villain": "false",
+        "avatar": "https://en.wikipedia.org/wiki/File:Web_of_Spider-Man_Vol_1_129-1.png"
+    },
+    {
+        "name": "Hulk",
+        "squad": "Marvel",
+        "villain": "false",
+        "avatar": "https://en.wikipedia.org/wiki/File:Hulk_(comics_character).png"
+    },
+    {
+        "name": "Iron Man",
+        "squad": "Marvel",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+    },
+    {
+        "name": "Thor",
+        "squad": "Marvel",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/4/41/Thor-272.jpg"
+    },
+    {
+        "name": "Captain America",
+        "squad": "Marvel",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/91/CaptainAmerica109.jpg"
+    },
+    {
+        "name": "Superman ",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/eb/SupermanRoss.png"
+    },
+    {
+        "name": "Batman",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/8/87/Batman_DC_Comics.png"
+    },
+    {
+        "name": "Wonder Woman",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/93/Wonder_Woman.jpg"
+    },
+    {
+        "name": "Flash",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/ed/The_Flash_Family.jpg"
+    },
+    {
+        "name": "Green Lantern",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/8/80/Green_Lantern_Rebirth_6.jpg"
+    },
+    {
+        "name": "Aquaman",
+        "squad": "DC",
+        "villain": "false",
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/9d/Aquaman_Rebirth_1.png"
+    }
+]

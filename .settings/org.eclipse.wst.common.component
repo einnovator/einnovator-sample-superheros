@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="einnovator-sample-superheros-0.0.1">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="einnovator-jpa-util-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-jpa-util/einnovator-jpa-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-common-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-common/einnovator-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-vsite-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-vsite/einnovator-vsite">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-clipboard-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-clipboard/einnovator-clipboard">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-sso-starter-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-sso-starter/einnovator-sso-starter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-util-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-util/einnovator-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-notifications-starter-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-notifications-starter/einnovator-notifications-starter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-documents-starter-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-documents-starter/einnovator-documents-starter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="einnovator-social-starter-0.1.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/einnovator-social-starter/einnovator-social-starter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="einnovator-sample-superheros"/>
+        <property name="java-output-path" value="/einnovator-sample-superheros/target/classes"/>
+    </wb-module>
+</project-modules>

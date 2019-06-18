@@ -1,0 +1,29 @@
+<div  xmlns:th="http://www.thymeleaf.org">
+
+	<div class="avatar-wrapper">
+		<img id="_img" class="img" th:src="@{${!#strings.isEmpty(superhero.avatar) ? superhero.avatar : links.cdn + '/img/avatar.png'}}" />
+		<a class="btn-upload" id="upload"><i class="fas fa-sync-alt" title="Upload Image"></i></a>				
+	</div>
+	
+	
+	<form id="upload-form" th:action="@{${'_upload'}}" method="post" enctype="multipart/form-data">
+		<input id="file" type="file" name="file" style="display: none"></input>
+		<input type="hidden" name="key" value="avatar"></input>
+		<input type="hidden" name="id" th:value="${superhero.id}"></input>
+	</form>
+
+<script>
+//<![CDATA[
+$(function() {
+	$('#upload').upload({img: '#_img', uri: '/api/upload',
+		callback: function(uri) {
+			console.log('upload:' + uri);
+			$('#img').val(uri);
+			$('#file').val(null);
+		}
+	});
+});
+
+//]]>
+</script>
+</div>

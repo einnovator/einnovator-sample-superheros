@@ -1,0 +1,35 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+	<div th:class="${'form-group' + (#fields.hasErrors('name')  ? ' has-error has-feedback':'')}">
+		<label>Name <sup class="required">*</sup></label>
+		<div class="">
+			<input type="text" class="form-control" th:value="${superhero.name}" placeholder="Name" th:field="*{name}"  />
+			<i th:if="${#fields.hasErrors('name')}" class="glyphicon glyphicon-remove form-group-feedback"></i>
+		</div>
+		<p th:if="${#fields.hasErrors('name')}" class="error">
+			<span th:each="err : ${#fields.errors('name')}" th:text="${err}" class="error"></span>
+		</p>
+	</div>
+
+	<div class="form-group">
+		<label>Squad</label>
+		<div class="">
+			<select name="squad" class="select" id="select-squad" th:field="*{squad}">
+				<option th:each="squad : ${T(org.einnovator.sample.superheros.model.Squad).values()}"
+				 th:value="${squad}" th:text="${squad.displayValue}"
+				 th:selected="${filter!=null and filter.squad==squad}"></option>
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label>	<input type="checkbox" class="form-check" th:value="${superhero.villain}" th:field="*{villain}"  /> Villain</label>
+	</div>
+
+
+	<div class="form-group">
+		<label for="description">About</label>
+		<textarea id="description" class="textarea"  name="description" th:text="${superhero.description}" rows="6"  title="About this Superhero" placeholder="about"></textarea>
+	</div>
+
+</div>
