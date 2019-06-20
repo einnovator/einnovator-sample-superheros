@@ -15,7 +15,7 @@ public interface SuperheroRepository extends RepositoryBase2<Superhero, Long> {
 
 	Page<Superhero> findAllByNameLikeAndSquadIn(String q, Collection<Squad> squads, Pageable pageable);
 
-	Page<Superhero> findAllByNameLikeAndSquadInAndByVillain(String q, Collection<Squad> squads, boolean villain, Pageable pageable);
+	Page<Superhero> findAllByNameLikeAndSquadInAndVillain(String q, Collection<Squad> squads, boolean villain, Pageable pageable);
 
 	Optional<Superhero> findOneByName(String name);
 

@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org" th:with="title=${(superhero!=null and superhero.id!=null ? 'Edit' : 'New') + ' Superhero'}">
 <head th:include="layout/layout :: head(title=${title})"></head>
-<body th:with="bcs=${ {'People', 'Superhero', title} }">
+<body th:with="bcs=${ {'Superheros', 'Superhero', title} }">
 	<div th:replace="layout/header"></div>
 
 	<div class="container-fluid">

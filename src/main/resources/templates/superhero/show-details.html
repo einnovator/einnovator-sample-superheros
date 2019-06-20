@@ -14,14 +14,14 @@
 	<div class="form-group">
 		<label>Squad</label>
 		<span class="d-block">
-			<span th:text="${superhero.squad}" ></span>
+			<span class="squad" th:text="${superhero.squad}" ></span>
 		</span>
 	</div>
 
 	<div class="form-group">
 		<label>Type</label>
 		<span class="d-block">
-			<span th:if="${superhero.type!=null}" th:text="${superhero.type ? 'Villain' : 'Hero'}" class="type"></span>
+			<span th:text="${#bools.isTrue(superhero.villain) ? 'Villain' : 'Hero'}" class="type"></span>
 		</span>
 	</div>
 

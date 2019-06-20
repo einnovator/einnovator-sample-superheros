@@ -1,31 +1,31 @@
 [
     {
         "name": "Spider-Man",
-        "squad": "Marvel",
+        "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://en.wikipedia.org/wiki/File:Web_of_Spider-Man_Vol_1_129-1.png"
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
     },
     {
         "name": "Hulk",
-        "squad": "Marvel",
+        "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://en.wikipedia.org/wiki/File:Hulk_(comics_character).png"
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_%28comics_character%29.png"
     },
     {
         "name": "Iron Man",
-        "squad": "Marvel",
+        "squad": "MARVEL",
         "villain": "false",
         "avatar": "https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
     },
     {
         "name": "Thor",
-        "squad": "Marvel",
+        "squad": "MARVEL",
         "villain": "false",
         "avatar": "https://upload.wikimedia.org/wikipedia/en/4/41/Thor-272.jpg"
     },
     {
         "name": "Captain America",
-        "squad": "Marvel",
+        "squad": "MARVEL",
         "villain": "false",
         "avatar": "https://upload.wikimedia.org/wikipedia/en/9/91/CaptainAmerica109.jpg"
     },

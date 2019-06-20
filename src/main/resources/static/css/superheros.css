@@ -6,13 +6,31 @@
 	height: 200px;
 }
 .header {
+	background-image: url("/img/superheros1-wide.jpg");
+	height: 80px;
+	background-size: cover;
+	color: white;
+}
+
+.footer {
+	border-top: none;
+	background-image: url("/img/superheros2-wide.jpg");
+	height: 160px;
+	padding: 100px 50px 10px 50px;
+	color: white !important;
+}
+
+
+
+.footer a, .footer a:hover, .footer a:visited, .footer a:active, .footer a:focus {
+	color: white !important;
+}
+
+.user-name {
+	color: white;
 }
 
 .logo-box {
-		background: black;
-		color: white;
-		width: 300px;
-		justify-content: center;
 }
 
 .header-title {
@@ -23,16 +41,6 @@
 }
 
 .menu-wrapper {
-}
-
-.footer {
-	border-top: thin solid black;
-	padding: 10px 0px;
-	margin: 10px 50px;
-	color: #888 !important;
-}
-.footer a, .footer a:hover, .footer a:visited, .footer a:active, .footer a:focus {
-	color: #888 !important;
 }
 
 .ribbon {
@@ -106,7 +114,26 @@ a, a:hover, a:visited, a:active, a:focus {
 	color: black;
 }
 
+.btn-primary, a.btn-primary {
+  background: #1d7835 !important;
+  border: #1d7835 !important;
+  color: white !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #218b3d !important;
+  box-shadow: none !important;
+}
+
 .avatar {
     height: 65px !important;
     border-radius: 15px;
+}
+
+.squad {
+	font-weight: bold;
+}
+
+.type {
+	font-weight: bold;
 }

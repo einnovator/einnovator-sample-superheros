@@ -10,12 +10,10 @@ server:
       
 spring:
   datasource:
-    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
+    #url: "jdbc:mysql://*****/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
     username: root
-    password: jsimao
+    #password: ****
     driver-class-name: com.mysql.jdbc.Driver
-    #url: jdbc:postgresql://localhost/superheros
-    #username: postgres
   jpa:
     generate-ddl: true
     #show-sql: true
@@ -37,12 +35,8 @@ spring:
       favor-path-extension: false
   banner:
     location : classpath:banner-superheros.txt
-    #image.location : /static/img/einnovator.png
-    #text: > Einnovator Sample - Superheros
-    #renderer: http://patorjk.com/software/taag/#p=display&f=Big&t=einnovator%20Demo%20%20-%20Superheros
   rabbitmq:
-    host : "localhost"
-    #host: rabbitmq.einnovator.org
+    host: rabbitmq.sandbox.nativex.cloud
     port : 5672
     username : app
     password : "app123!"
@@ -109,6 +103,15 @@ ui:
 
 spring:
   profiles: local
+  datasource:
+    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
+    password: jsimao
+  rabbitmq:
+    host : "localhost"
+    port : 5672
+    username : app
+    password : "app123!"
+    virtualHost: vh
 
 sso:
   server : http://localhost:2000
@@ -117,8 +120,6 @@ sso:
 
 notifications:
   server: http://localhost:2010
-  amqp:
-    notifications-queue: movies
 
 documents:
   server: http://localhost:2020
@@ -136,6 +137,15 @@ ui:
 
 spring:
   profiles: monitor
+  datasource:
+    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
+    password: jsimao
+  rabbitmq:
+    host : "localhost"
+    port : 5672
+    username : app
+    password : "app123!"
+    virtualHost: vh
 
 sso:
   server : http://localhost:2001
@@ -144,8 +154,7 @@ sso:
 
 notifications:
   server: http://localhost:2011
-  amqp:
-    notifications-queue: movies
+
 
 documents:
   server: http://localhost:2021
@@ -204,4 +213,29 @@ ui:
     cdn: http://cdn.mydomain.sandbox.nativex.cloud
     sso: http://sso.mydomain.sandbox.nativex.cloud
     notifications: http://notification.mydomain.sandbox.nativex.cloud
+
+---
+
+spring:
+  profiles: mydomain
+ 
+sso:
+  server : https://sso.mydomain.nativex.cloud
+  client-id: application
+  client-secret: application$123
+
+notifications:
+  server: https://notifications.mydomain.nativex.cloud
+
+documents:
+  server: https://documents.mydomain.nativex.cloud
   
+social:
+  server: https://social.mydomain.nativex.cloud
+  
+ui:
+  links:
+    cdn: http://cdn.mydomain.nativex.cloud
+    sso: http://sso.mydomain.nativex.cloud
+    notifications: http://notification.mydomain.nativex.cloud
+    

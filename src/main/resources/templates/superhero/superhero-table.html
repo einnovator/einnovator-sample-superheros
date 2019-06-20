@@ -25,7 +25,7 @@
 			<span th:if="${superhero.squad!=null}" th:text="${superhero.squad.displayValue}" class="squad"></span>
 		</td>
 		<td>
-			<span th:if="${superhero.type!=null}" th:text="${superhero.type ? 'Villain' : 'Hero'}" class="type"></span>
+			<span th:text="${#bools.isTrue(superhero.villain) ? 'Villain' : 'Hero'}" class="type"></span>
 		</td>
 		<td></td>
 	</tr>		

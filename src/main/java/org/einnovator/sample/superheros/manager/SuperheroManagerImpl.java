@@ -70,7 +70,7 @@ public class SuperheroManagerImpl extends ManagerBaseImpl3<Superhero> implements
 				String q = filter.getQ()!=null ?  "%" + filter.getQ().trim() + "%" : "%";
 				Collection<Squad> squads = filter.getSquad()!=null ? Collections.singleton(filter.getSquad()) : Arrays.asList(Squad.values());
 				if (filter.getVillain()!=null) {
-					page = repository.findAllByNameLikeAndSquadInAndByVillain(q, squads, filter.getVillain(), pageable);
+					page = repository.findAllByNameLikeAndSquadInAndVillain(q, squads, filter.getVillain(), pageable);
 				} else {
 					page = repository.findAllByNameLikeAndSquadIn(q, squads, pageable);
 				}
@@ -104,7 +104,7 @@ public class SuperheroManagerImpl extends ManagerBaseImpl3<Superhero> implements
 	private boolean init;
 
 	public void populate() {
-		populate(false);
+		populate(true);
 	}
 	
 	@Override
