@@ -1,29 +1,35 @@
 <div xmlns:th="http://www.thymeleaf.org">
 
-	<div class="form-group">
-		<img class="img" th:src="${!#strings.isEmpty(superhero.avatar) ? superhero.avatar : '/img/superhero.png'}" />
+	<div class="form-group d-flex">
+		<img class="img mr-5" th:src="${!#strings.isEmpty(superhero.avatar) ? superhero.avatar : '/img/superhero.png'}" />
+
+		<div class="ml-5">
+			<div class="form-group">
+				<label>Name</label>
+				<span class="h1 d-block">
+					<span th:text="${superhero.name}" ></span>
+				</span>
+			</div>
+		
+			<div class="form-group">
+				<label>Squad</label>
+				<span class="d-block">
+					<img class="squad-img" th:if="${superhero.squad!=null and superhero.squad.name()=='MARVEL'}"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MarvelLogo.svg/330px-MarvelLogo.svg.png"></img>
+					<img class="squad-img" th:if="${superhero.squad!=null and superhero.squad.name()=='DC'}"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/900px-DC_Comics_logo.png"></img>
+					<span class="squad" th:text="${superhero.squad}" ></span>
+				</span>
+			</div>
+		
+			<div class="form-group">
+				<label>Type</label>
+				<span class="d-block">
+					<span th:text="${#bools.isTrue(superhero.villain) ? 'Villain' : 'Hero'}" class="type"></span>
+				</span>
+			</div>
+		
+		</div>
 	</div>
 	
-	<div class="form-group">
-		<label>Name</label>
-		<span class="h2 d-block">
-			<span th:text="${superhero.name}" ></span>
-		</span>
-	</div>
-
-	<div class="form-group">
-		<label>Squad</label>
-		<span class="d-block">
-			<span class="squad" th:text="${superhero.squad}" ></span>
-		</span>
-	</div>
-
-	<div class="form-group">
-		<label>Type</label>
-		<span class="d-block">
-			<span th:text="${#bools.isTrue(superhero.villain) ? 'Villain' : 'Hero'}" class="type"></span>
-		</span>
-	</div>
 
 
 

@@ -3,7 +3,7 @@
 }
 
 .img {
-	height: 200px;
+	height: 300px;
 }
 .header {
 	background-image: url("/img/superheros1-wide.jpg");
@@ -27,6 +27,10 @@
 }
 
 .user-name {
+	color: white;
+}
+
+.user-title {
 	color: white;
 }
 
@@ -74,12 +78,16 @@
 
 
 .col-user-info {
-	padding-right: 120px;
+	padding-right: 180px;
 }
 
 .user-box .dropdown {
-	right: 120px;
+	right: 280px;
 	min-width: 210px;
+}
+.user-img {
+	background-color: white;
+	border-radius: 50%;
 }
 
 .card-header {
@@ -88,6 +96,9 @@
 	text-transform: uppercase;
 }
 
+.pager {
+	background-color: inherit;
+}
 
 .card p {
     margin-top: 0;
@@ -134,6 +145,27 @@ a, a:hover, a:visited, a:active, a:focus {
 	font-weight: bold;
 }
 
+.squad-img {
+	height: 50px;
+	display: inline-block;
+	margin-right: 10px;	
+}
+.table .squad-img {
+	height: 30px;
+	margin-right: 5px;	
+}
 .type {
 	font-weight: bold;
+}
+
+.layout2 > :first-child {
+	background-color: #f8f8f8;
+	margin: 40px 50px;
+	padding: 30px 50px;
+	border-top: 2px solid #00a;
+	border-bottom: 2px solid #0a0;
+}
+
+.layout2 > :last-child {
+	margin-left: 0px;
 }

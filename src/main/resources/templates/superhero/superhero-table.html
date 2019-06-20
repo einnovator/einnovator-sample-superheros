@@ -3,8 +3,8 @@
 		<th style="width: 2em"></th>
 		<th style="width: 40px"></th>
 		<th>Name</th>
-		<th>Squad</th>
-		<th>Type</th>
+		<th class="text-center">Squad</th>
+		<th class="text-center">Type</th>
 		<th style="width: 4em"></th>
 	</tr>
 
@@ -21,10 +21,12 @@
 				<span class="s" th:text="${superhero.name}"></span>
 			</a>
 		</td>
-		<td>
+		<td class="text-center">
+			<img class="squad-img" th:if="${superhero.squad!=null and superhero.squad.name()=='MARVEL'}"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/MarvelLogo.svg/330px-MarvelLogo.svg.png"></img>
+			<img class="squad-img" th:if="${superhero.squad!=null and superhero.squad.name()=='DC'}"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/900px-DC_Comics_logo.png"></img>
 			<span th:if="${superhero.squad!=null}" th:text="${superhero.squad.displayValue}" class="squad"></span>
 		</td>
-		<td>
+		<td class="text-center">
 			<span th:text="${#bools.isTrue(superhero.villain) ? 'Villain' : 'Hero'}" class="type"></span>
 		</td>
 		<td></td>

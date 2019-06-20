@@ -15,15 +15,17 @@
 					<div th:replace="layout/comments"></div>
 				</th:block>
 					
-				<div class="container-footer row">
-					<div class="col-6">
-						<a class="btn btn-link btn-cancel" th:href="@{${'/superhero'}}"><i class="fas fa-chevron-circle-left"></i> Back</a>
-					</div>
-					<div class="col-6 text-right">
-						<a class="btn btn-lg btn-primary" th:href="@{${'/superhero/' + superhero.uuid + '/edit'}}" title="Edit"> <i class="fas fa-pen"></i> Edit</a>
-						<!-- 
-						<a class="btn btn-lg btn-primary" th:href="@{${'/superhero/' + superhero.uuid + '/superhero/create'}}" title="Add Superhero"> <i class="fas fa-plus-circle"></i> Add Superhero</a>
-						 -->
+				<div class="container-footer">
+					<div class="row">
+						<div class="col-6">
+							<a class="btn btn-link btn-cancel" th:href="@{${'/superhero'}}"><i class="fas fa-chevron-circle-left"></i> Back</a>
+						</div>
+						<div class="col-6 text-right">
+							<a class="btn btn-lg btn-primary" th:href="@{${'/superhero/' + superhero.uuid + '/edit'}}" title="Edit"> <i class="fas fa-pen"></i> Edit</a>
+							<!-- 
+							<a class="btn btn-lg btn-primary" th:href="@{${'/superhero/' + superhero.uuid + '/superhero/create'}}" title="Add Superhero"> <i class="fas fa-plus-circle"></i> Add Superhero</a>
+							 -->
+						</div>
 					</div>
 				</div>
 			</div>	
