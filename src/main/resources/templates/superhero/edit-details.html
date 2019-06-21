@@ -3,7 +3,7 @@
 	<div th:class="${'form-group' + (#fields.hasErrors('name')  ? ' has-error has-feedback':'')}">
 		<label>Name <sup class="required">*</sup></label>
 		<div class="">
-			<input type="text" class="form-control" th:value="${superhero.name}" placeholder="Name" th:field="*{name}"  />
+			<input type="text" class="form-control focus" th:value="${superhero.name}" placeholder="Name" th:field="*{name}"  />
 			<i th:if="${#fields.hasErrors('name')}" class="glyphicon glyphicon-remove form-group-feedback"></i>
 		</div>
 		<p th:if="${#fields.hasErrors('name')}" class="error">

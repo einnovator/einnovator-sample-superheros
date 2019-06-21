@@ -3,7 +3,8 @@
         "name": "Spider-Man",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
+        "avatar": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
+        "description" : "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy N.15 (August 1962) in the Silver Age of Comic Books."
     },
     {
         "name": "Hulk",
