@@ -45,12 +45,11 @@ spring:
                 
 banner: #boot1
     location : classpath:banner-superheros.txt
-    #image.location : /static/img/einnovator.png
-    #text: einnovator | movies
-    #renderer: http://patorjk.com/software/taag/#p=display&f=Big&t=einnovator%20Demo%20%20-%20Superheros
+    #text: superheros
+    #renderer: http://patorjk.com/software/taag/#p=display&f=Big&t=superheros
 
 sso:
-  server : https://sso.sandbox.nativex.cloud
+  server : https://sso.samples.sandbox.nativex.cloud
   client-id: application
   client-secret: application$123
   registration:
@@ -60,7 +59,7 @@ sso:
       global: true
 
 notifications:
-  server: https://notifications.sandbox.nativex.cloud
+  server: https://notifications.samples.sandbox.nativex.cloud
   amqp:
     notifications-queue: superheros
   registration:
@@ -86,18 +85,18 @@ notifications:
         #resource: notifications/mail/movie.html
 
 documents:
-  server: https://documents.sandbox.nativex.cloud
+  server: https://documents.samples.sandbox.nativex.cloud
   files:
     root: /.superheros/
   
 social:
-  server: https://social.sandbox.nativex.cloud
+  server: https://social.samples.sandbox.nativex.cloud
   
 ui:
   links:
-    cdn: http://cdn.sandbox.nativex.cloud
-    sso: http://sso.sandbox.nativex.cloud
-    notifications: http://notification.sandbox.nativex.cloud
+    cdn: http://cdn.samples.sandbox.nativex.cloud
+    sso: http://sso.samples.sandbox.nativex.cloud
+    notifications: http://notifications.samples.sandbox.nativex.cloud
 
 ---
 
@@ -135,18 +134,6 @@ ui:
 
 ---
 
-spring:
-  profiles: monitor
-  datasource:
-    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
-    password: jsimao
-  rabbitmq:
-    host : "localhost"
-    port : 5672
-    username : app
-    password : "app123!"
-    virtualHost: vh
-
 sso:
   server : http://localhost:2001
   client-id: application
@@ -154,7 +141,6 @@ sso:
 
 notifications:
   server: http://localhost:2011
-
 
 documents:
   server: http://localhost:2021
@@ -174,8 +160,6 @@ sso:
 
 notifications:
   server: https://notifications.einnovator.org
-  amqp:
-    notifications-queue: movies
 
 documents:
   server: https://documents.einnovator.org
@@ -193,6 +177,31 @@ ui:
 
 spring:
   profiles: mysandbox
+ 
+sso:
+  server : https://sso.mydomain.sandbox.nativex.cloud
+  client-id: application
+  client-secret: application$123
+
+notifications:
+  server: https://notifications.mydomain.sandbox.nativex.cloud
+
+documents:
+  server: https://documents.mydomain.sandbox.nativex.cloud
+  
+social:
+  server: https://social.mydomain.sandbox.nativex.cloud
+  
+ui:
+  links:
+    cdn: http://cdn.mydomain.sandbox.nativex.cloud
+    sso: http://sso.mydomain.sandbox.nativex.cloud
+    notifications: http://notification.mydomain.sandbox.nativex.cloud
+
+---
+
+spring:
+  profiles: mysandbox2
  
 sso:
   server : https://sso.mydomain.sandbox.nativex.cloud
@@ -238,4 +247,30 @@ ui:
     cdn: http://cdn.mydomain.nativex.cloud
     sso: http://sso.mydomain.nativex.cloud
     notifications: http://notification.mydomain.nativex.cloud
+
+
+---
+
+spring:
+  profiles: mydomain2
+ 
+sso:
+  server : https://sso.mydomain.einnovator.cloud
+  client-id: application
+  client-secret: application$123
+
+notifications:
+  server: https://notifications.mydomain.einnovator.cloud
+
+documents:
+  server: https://documents.mydomain.einnovator.cloud
+  
+social:
+  server: https://social.mydomain.einnovator.cloud
+  
+ui:
+  links:
+    cdn: http://cdn.mydomain.einnovator.cloud
+    sso: http://sso.mydomain.einnovator.cloud
+    notifications: http://notification.mydomain.einnovator.cloud
     
