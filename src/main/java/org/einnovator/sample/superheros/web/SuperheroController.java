@@ -59,11 +59,11 @@ public class SuperheroController extends ControllerBase {
 		Superhero superhero = manager.find(id);
 
 		if (superhero == null) {
-			notfound("show", request, redirectAttributes);
+			flashNotfound("show", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		if (!isAllowedView(principal, superhero)) {
-			forbidden("show", request, redirectAttributes);
+			flashForbidden("show", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		model.addAttribute("superhero", superhero);
@@ -88,18 +88,18 @@ public class SuperheroController extends ControllerBase {
 			Model model, Principal principal, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
 		if (!isAllowedCreate(principal, superhero)) {
-			forbidden("createPOST", request, redirectAttributes);
+			flashForbidden("createPOST", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		if (errors.hasErrors()) {
 			addCommonToModel(principal, model);
-			failure("createPOST", request, redirectAttributes, errors);
+			flashFailure("createPOST", request, redirectAttributes, errors);
 			return "superhero/edit";
 		}
 		Superhero superhero2 = manager.create(superhero, true);
 		if (superhero2 == null) {
 			logger.error("createPOST: " + superhero);
-			failure("createPOST", request, redirectAttributes, superhero);
+			flashFailure("createPOST", request, redirectAttributes, superhero);
 			return "";
 		}
 		logger.info("createPOST: " + superhero2);
@@ -113,11 +113,11 @@ public class SuperheroController extends ControllerBase {
 
 		Superhero superhero = manager.find(id);
 		if (superhero == null) {
-			notfound("editGet", request, redirectAttributes);
+			flashNotfound("editGet", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		if (!isAllowedManage(principal, superhero)) {
-			forbidden("show", request, redirectAttributes);
+			flashForbidden("show", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		
@@ -132,11 +132,11 @@ public class SuperheroController extends ControllerBase {
 
 		Superhero superhero0 = manager.find(id_);
 		if (superhero0 == null) {
-			notfound("editPut", request, redirectAttributes);
+			flashNotfound("editPut", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		if (!isAllowedManage(principal, superhero0)) {
-			forbidden("editPut", request, redirectAttributes);
+			flashForbidden("editPut", request, redirectAttributes);
 			return redirect("/superhero");
 		}
 		superhero.setId(superhero0.getId());
@@ -145,7 +145,7 @@ public class SuperheroController extends ControllerBase {
 			logger.error("editPut:  " + HttpStatus.BAD_REQUEST.getReasonPhrase());
 			return redirect("/superhero");
 		}
-		success("editPut", request, redirectAttributes, superhero);
+		flashSuccess("editPut", request, redirectAttributes, superhero);
 		model.addAttribute("superhero", superhero2);
 		return redirect("/superhero/" + superhero.getUuid());
 	}
@@ -155,20 +155,20 @@ public class SuperheroController extends ControllerBase {
 			Model model, Principal principal, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 		Superhero superhero = manager.find(id);
 		if (superhero == null) {
-			notfound("delete", request, redirectAttributes);
+			flashNotfound("delete", request, redirectAttributes);
 			return redirect("/");
 		}
 		if (!isAllowedManage(principal, superhero)) {
-			forbidden("delete", request, redirectAttributes);
+			flashForbidden("delete", request, redirectAttributes);
 			return redirect("/");
 		}
 
 		Superhero superhero2 = manager.delete(superhero, false);
 		if (superhero2 == null) {
-			failure("delete", request, redirectAttributes, id);
+			flashFailure("delete", request, redirectAttributes, id);
 			return redirect("/superhero/" + superhero.getUuid());
 		}
-		success("delete", request, redirectAttributes, superhero);
+		flashSuccess("delete", request, redirectAttributes, superhero);
 		return redirect("/superhero");
 	}
 
