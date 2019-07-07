@@ -62,27 +62,46 @@ notifications:
   server: https://notifications.samples.sandbox.nativex.cloud
   amqp:
     notifications-queue: superheros
+  templates:
+    #uri: "http://cdn.mydomain.nativex.cloud/templates/devops"  
+    app: "notifications/app"
+    sms: notifications/sms
+    mail: notifications/mail
   registration:
     auto: true
+    templates:
+      - name: "Superheros Invitation"
+        subject: "You received an invitation by ${principal.displayName} to join the Superhero Fan Community!"    
+        medium: EMAIL
+        category: SYSTEM
+        uri: "invitation.html"
     types:
     - source-type: Superhero
       action-type: Create
       description: "Do you want to receive notification when a Superhero is created ?"
       category: Superhero
       mail-template:
-        #resource: notifications/mail/movie.html
+        name: "Superhero Created"
+        subject: "Superhero was created by ${principal.displayName}"
+        uri: superhero.html
     - source-type: Superhero
       action-type: Update
       description: "Do you want to receive notification when a Superhero is updated ?"
       category: Superhero
       mail-template:
-        #resource: notifications/mail/movie.html
+        name: "Superhero Updated"
+        subject: "Superhero was updated by ${principal.displayName}"
+        uri: superhero.html
     - source-type: Superhero
       action-type: Delete
       description: "Do you want to receive notification when a Superhero is deleted ?"
       category: Superhero
       mail-template:
-        #resource: notifications/mail/movie.html
+        name: "Superhero Deleted"
+        subject: "Superhero was deleted by ${principal.displayName}"
+        uri: superhero.html
+
+
 
 documents:
   server: https://documents.samples.sandbox.nativex.cloud
@@ -132,6 +151,39 @@ ui:
     sso: http://localhost:2000
     notifications: http://localhost:2010
 
+---
+
+spring:
+  profiles: monitor
+  datasource:
+    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
+    password: jsimao
+  rabbitmq:
+    host : "localhost"
+    port : 5672
+    username : app
+    password : "app123!"
+    virtualHost: vh
+
+sso:
+  server : http://localhost:2001
+  client-id: application
+  client-secret: application$123
+
+notifications:
+  server: http://localhost:2011
+
+documents:
+  server: http://localhost:2021
+  
+social:
+  server: http://localhost:2051
+  
+ui:
+  links:
+    cdn: http://localhost:1900
+    sso: http://localhost:2000
+    notifications: http://localhost:2010
 ---
 
 sso:
