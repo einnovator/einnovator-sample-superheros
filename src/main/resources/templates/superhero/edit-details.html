@@ -3,7 +3,7 @@
 	<div th:class="${'form-group' + (#fields.hasErrors('name')  ? ' has-error has-feedback':'')}">
 		<label>Name <sup class="required">*</sup></label>
 		<div class="">
-			<input type="text" class="form-control focus" th:value="${superhero.name}" placeholder="Name" th:field="*{name}"  />
+			<input type="text" class="form-control sleek" th:value="${superhero.name}" placeholder="Name" th:field="*{name}"  />
 			<i th:if="${#fields.hasErrors('name')}" class="form-group-feedback"></i>
 		</div>
 		<p th:if="${#fields.hasErrors('name')}" class="error">
@@ -14,7 +14,7 @@
 	<div class="form-group">
 		<label>Squad</label>
 		<div class="">
-			<select name="squad" class="select" id="select-squad" th:field="*{squad}">
+			<select name="squad" class="select sleek" id="select-squad" th:field="*{squad}">
 				<option th:each="squad : ${T(org.einnovator.sample.superheros.model.Squad).values()}"
 				 th:value="${squad}" th:text="${squad.displayValue}"
 				 th:selected="${filter!=null and filter.squad==squad}"></option>

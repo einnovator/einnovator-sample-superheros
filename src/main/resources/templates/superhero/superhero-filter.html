@@ -11,7 +11,7 @@
 			</div>
 			<div class="text-right flex-03 mr-3">
 					<span class="text-light d-block label">Squad</span>
-					<select name="role" class="select" id="select-squad">
+					<select name="role" class="select sleek" id="select-squad">
 						<option></option>
 						<option th:each="squad : ${T(org.einnovator.sample.superheros.model.Squad).values()}"
 						 th:value="${squad}" th:text="${squad.displayValue}"
@@ -20,7 +20,7 @@
 			</div>
 			<div class="text-right flex-03 mr-3">
 				<span class="text-light d-block label">Type</span>
-				<select name="villain" class="select" id="select-squad">
+				<select name="villain" class="select sleek" id="select-squad">
 					<option>Any</option>
 					<option value="false">Hero</option>
 					<option value="true">Villain</option>
