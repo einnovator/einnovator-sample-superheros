@@ -110,6 +110,12 @@ documents:
   
 social:
   server: https://social.samples.sandbox.nativex.cloud
+  registration:
+    auto: true
+    channels:
+    - name: "Superheros"
+      type: "FORUM"
+      purpose: "Superheros Community discussion forum"
   
 ui:
   links:
