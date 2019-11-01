@@ -30,7 +30,7 @@ public class Superhero extends EntityBase2<Long> {
 
 	private Boolean villain;
 
-	@Column(length=256)
+	@Column(length=255)
 	private String avatar;
 
 
