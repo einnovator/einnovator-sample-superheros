@@ -109,7 +109,7 @@
 	</build>
 
 	<repositories>
-		<repository>
+		<repository >
 			<id>einnovator</id>
 			<url>https://einnovator-mvnrepo.s3.amazonaws.com/release</url>
 		</repository>
