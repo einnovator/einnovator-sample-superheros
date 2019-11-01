@@ -86,23 +86,23 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+<!-- 
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>1.5.0</version>
 				<configuration>
-<!-- 				 <from>
+				 <from>
 				    <image>477697777665.dkr.ecr.us-east-1.amazonaws.com/einnovator-sample-superheros</image>
 				    <credHelper>ecr-login</credHelper>
-				  </from> -->
-				  <!-- 
+				  </from>
 					<auth>
 						<username>${env.REGISTRY_USERNAME}</username>
 						<password>${env.REGISTRY_PASSWORD}</password>
-				    </auth> -->
-				  <!--   <containerizingMode>packaged</containerizingMode> -->
+				    </auth>
 				</configuration>
 			</plugin>
+-->
 		</plugins>
 
 		
