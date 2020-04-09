@@ -9,6 +9,7 @@ import org.einnovator.sample.superheros.config.SuperheroConfiguration;
 import org.einnovator.sso.client.manager.GroupManager;
 import org.einnovator.sso.client.manager.RoleManager;
 import org.einnovator.sso.client.manager.UserManager;
+import org.einnovator.sso.client.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class ControllerBase extends org.einnovator.common.web.ControllerBase {
@@ -85,7 +86,7 @@ public abstract class ControllerBase extends org.einnovator.common.web.Controlle
 	}
 	
 	protected boolean isMember(Principal principal, String groupId) {
-		return groupManager.isMember(groupId, principal.getName());
+		return Role.isPrincipalMember(groupId);
 	}
 
 	

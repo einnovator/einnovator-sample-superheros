@@ -33,12 +33,9 @@ public class AppControllerAdvise extends CommonControllerAdvise {
 	@Autowired
 	private RoleManager roleManager;
 
-	@Autowired
-	private UserManager userManager;
-
 	@Override
 	protected Object makePrincipalInfo(Principal principal, boolean invalid) {
-		return userManager.getUser(principal.getName());
+		return SsoClient.getPrincipalUser();
 	}
 
 	@ModelAttribute("notificationCount")

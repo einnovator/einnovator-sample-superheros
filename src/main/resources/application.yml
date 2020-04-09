@@ -55,8 +55,10 @@ sso:
   registration:
     auto: true
     roles:
-    - name: "Superhero Manager"
-      global: true
+    - name: "SUPERHERO_MANAGER"
+      display-name: "Superhero Manager"
+      type: GLOBAL
+      description: "User with this role can manage Superheros" 
 
 notifications:
   server: https://notifications.samples.sandbox.nativex.cloud
@@ -78,7 +80,7 @@ notifications:
     types:
     - source-type: Superhero
       action-type: Create
-      description: "Do you want to receive notification when a Superhero is created ?"
+      description: "Receive notification when a Superhero is created ?"
       category: Superhero
       mail-template:
         name: "Superhero Created"
@@ -86,7 +88,7 @@ notifications:
         uri: superhero.html
     - source-type: Superhero
       action-type: Update
-      description: "Do you want to receive notification when a Superhero is updated ?"
+      description: "Receive notification when a Superhero is updated ?"
       category: Superhero
       mail-template:
         name: "Superhero Updated"
@@ -94,7 +96,7 @@ notifications:
         uri: superhero.html
     - source-type: Superhero
       action-type: Delete
-      description: "Do you want to receive notification when a Superhero is deleted ?"
+      description: "Receive notification when a Superhero is deleted ?"
       category: Superhero
       mail-template:
         name: "Superhero Deleted"

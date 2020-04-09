@@ -8,7 +8,6 @@ import javax.persistence.Lob;
 
 import org.einnovator.jpa.model.EntityBase2;
 import org.einnovator.social.client.model.Channel;
-import org.einnovator.social.client.model.ChannelBuilder;
 import org.einnovator.social.client.model.ChannelType;
 import org.einnovator.util.model.Ref;
 import org.einnovator.util.model.RefBuilder;
@@ -166,19 +165,15 @@ public class Superhero extends EntityBase2<Long> {
 				;
 	}
 	
-	/**
-	 * @return
-	 */
 	public Channel makeChannel(String baseUri) {
-		return new ChannelBuilder()
-				.uuid(channelId)
-				.name(name)
-				.purpose("Discussion about " + (Boolean.TRUE.equals(villain) ? "villain " : "") + name + " from " + squad)
-				.img(avatar)
-				.thumbnail(avatar)
-				.type(ChannelType.COMMENTS)
-				.ref(makeRef(baseUri))
-				.build();
+		return (Channel)new Channel()
+				.withName(name)
+				.withPurpose("Discussion about " + (Boolean.TRUE.equals(villain) ? "villain " : "") + name + " from " + squad)
+				.withImg(avatar)
+				.withThumbnail(avatar)
+				.withType(ChannelType.COMMENTS)
+				.withRef(makeRef(baseUri))
+				.withUuid(channelId);
 	}
 	
 	public Ref makeRef(String baseUri) {

@@ -89,7 +89,7 @@ public class SuperheroManagerImpl extends ManagerBaseImpl3<Superhero> implements
 	public void processAfterPersistence(Superhero superhero) {
 		super.processAfterPersistence(superhero);
 		Channel channel = superhero.makeChannel(getBaseUri());
-		channel = channelManager.createOrUpdateChannel(channel);
+		channel = channelManager.createOrUpdateChannel(channel, null);
 		if (channel!=null && superhero.getChannelId()==null) {
 			superhero.setChannelId(channel.getUuid());
 			repository.save(superhero);			
