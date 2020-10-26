@@ -50,7 +50,7 @@ banner: #boot1
     #renderer: http://patorjk.com/software/taag/#p=display&f=Big&t=superheros
 
 sso:
-  server : https://sso.samples.sandbox.nativex.cloud
+  server : https://sso.einnovator.org
   client-id: application
   client-secret: application$123
   registration:
@@ -62,7 +62,7 @@ sso:
       description: "User with this role can manage Superheros" 
 
 notifications:
-  server: https://notifications.samples.sandbox.nativex.cloud
+  server: https://****
   amqp:
     notifications-queue: superheros
   templates:
@@ -107,12 +107,12 @@ notifications:
 
 
 documents:
-  server: https://documents.samples.sandbox.nativex.cloud
+  server: https://****
   files:
     root: /.superheros/
   
 social:
-  server: https://social.samples.sandbox.nativex.cloud
+  server: https://****
   registration:
     auto: true
     channels:
@@ -122,10 +122,32 @@ social:
   
 ui:
   links:
+    cdn: https://cdn.einnovator.org
+    sso: https://sso.einnovator.org
+    notifications: http://notifications.einnovator.org
+
+---
+
+spring:
+  profiles: sandbox
+
+sso:
+  server : https://sso.samples.sandbox.nativex.cloud
+  client-id: application
+  client-secret: application$123
+    
+documents:
+  server: https://documents.samples.sandbox.nativex.cloud
+  
+social:
+  server: https://social.samples.sandbox.nativex.cloud
+  
+ui:
+  links:
     cdn: http://cdn.samples.sandbox.nativex.cloud
     sso: http://sso.samples.sandbox.nativex.cloud
     notifications: http://notifications.samples.sandbox.nativex.cloud
-
+  
 ---
 
 spring:
@@ -193,22 +215,7 @@ ui:
     cdn: http://localhost:1900
     sso: http://localhost:2000
     notifications: http://localhost:2010
----
 
-sso:
-  server : http://localhost:2001
-  client-id: application
-  client-secret: application$123
-
-notifications:
-  server: http://localhost:2011
-
-documents:
-  server: http://localhost:2021
-  
-social:
-  server: http://localhost:2051
-  
 ---
 
 spring:

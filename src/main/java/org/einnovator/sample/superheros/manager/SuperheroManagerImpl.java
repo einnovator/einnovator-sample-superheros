@@ -19,6 +19,8 @@ import org.einnovator.sample.superheros.model.Squad;
 import org.einnovator.sample.superheros.model.Superhero;
 import org.einnovator.sample.superheros.modelx.SuperheroFilter;
 import org.einnovator.sample.superheros.repository.SuperheroRepository;
+import org.einnovator.social.client.config.SocialClientConfig;
+import org.einnovator.social.client.config.SocialClientConfiguration;
 import org.einnovator.social.client.manager.ChannelManager;
 import org.einnovator.social.client.model.Channel;
 import org.einnovator.util.MappingUtils;
@@ -43,6 +45,9 @@ public class SuperheroManagerImpl extends ManagerBaseImpl3<Superhero> implements
 
 	@Autowired
 	private ChannelManager channelManager;
+	
+	@Autowired
+	private SocialClientConfiguration socialConfig;
 
 	@Autowired
 	private UIConfiguration ui;
@@ -88,11 +93,13 @@ public class SuperheroManagerImpl extends ManagerBaseImpl3<Superhero> implements
 	@Override
 	public void processAfterPersistence(Superhero superhero) {
 		super.processAfterPersistence(superhero);
-		Channel channel = superhero.makeChannel(getBaseUri());
-		channel = channelManager.createOrUpdateChannel(channel, null);
-		if (channel!=null && superhero.getChannelId()==null) {
-			superhero.setChannelId(channel.getUuid());
-			repository.save(superhero);			
+		if (socialConfig.getServer()!=null && socialConfig.getServer().indexOf("***")<0) {
+			Channel channel = superhero.makeChannel(getBaseUri());
+			channel = channelManager.createOrUpdateChannel(channel, null);
+			if (channel!=null && superhero.getChannelId()==null) {
+				superhero.setChannelId(channel.getUuid());
+				repository.save(superhero);			
+			}			
 		}
 	}
 	
