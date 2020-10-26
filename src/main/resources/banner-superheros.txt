@@ -1,9 +1,2 @@
-   _____                       _                        
-  / ____|                     | |                       
- | (___  _   _ _ __   ___ _ __| |__   ___ _ __ ___  ___ 
-  \___ \| | | | '_ \ / _ \ '__| '_ \ / _ \ '__/ _ \/ __|
-  ____) | |_| | |_) |  __/ |  | | | |  __/ | | (_) \__ \
- |_____/ \__,_| .__/ \___|_|  |_| |_|\___|_|  \___/|___/
-              | |                                       
-              |_|  c) Apache License - Sample App for EInnovator Micro-Services Suite
+(c) Superheros - Apache License - Sample App for EInnovator Micro-Services Suite
               

@@ -1,10 +1,12 @@
 <header class="header" xmlns:th="http://www.thymeleaf.org">
 	<nav>
 		<div class="col-header logo-box">
-			<h3 class="header-title"></h3>
 		</div>
-		<div class="col-header col-menu">
-			<div th:replace="layout/menu-main"></div>
+		<div class="col-header col-header-main">
+			<h3 class="header-title">Superheros</h3>
+			<div class="header-menu">
+				<div th:replace="layout/menu-main"></div>
+			</div>
 		</div>
 		<div class="col-header col-toolbar">
 			<div th:replace="layout/header-toolbar"></div>

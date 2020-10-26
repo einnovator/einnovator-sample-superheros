@@ -23,22 +23,21 @@
 		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
 	
 		<link rel="stylesheet" type="text/css" th:href="${links.cdn + '/theme/base/css/styles.css'}"></link>
-
-		<link rel="stylesheet" type="text/css" href="http://localhost:1900/theme/base/css/styles.css"></link>
+		<link rel="stylesheet" type="text/css" th:href="${links.cdn + '/theme/base/css/social.css'}"></link>
 		
  		<link rel="stylesheet" type="text/css" href="css/superheros.css" />
 						
 		<th:block th:with="theme_ = ${'base'}">
-			<link rel="icon" th:href="${links.cdn +  '/theme/' + theme_ + '/favicon.ico'}" />
+			<link rel="icon" th:href="${links.cdn + '/theme/' + theme_ + '/favicon.ico'}" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-status-bar-style" content="blue" />
 			<meta name="mobile-web-app-capable" content="yes" />
 
-			<link rel="apple-touch-startup-image" th:href="${links.cdn +  '/theme/' + theme_ + '/img/logo.png'}" />
-			<link rel="apple-touch-icon" th:href="${links.cdn +  '/theme/' + theme_ + '/img/logo.png'}" />
-			<link rel="apple-touch-icon-precomposed" sizes="128x128" th:href="${links.cdn +  '/theme/' + theme_ + '/img/logo.png'}" />	
-			<link rel="shortcut icon" sizes="196x196" th:href="${links.cdn +  '/theme/' + theme_ + '/img/logo.png'}" />
-			<link rel="shortcut icon" sizes="128x128" th:href="${links.cdn +  '/theme/' + theme_ + '/img/logo.png'}" />
+			<link rel="apple-touch-startup-image" th:href="${links.cdn + '/theme/' + theme_ + '/img/logo.png'}" />
+			<link rel="apple-touch-icon" th:href="${links.cdn + '/theme/' + theme_ + '/img/logo.png'}" />
+			<link rel="apple-touch-icon-precomposed" sizes="128x128" th:href="${links.cdn + '/theme/' + theme_ + '/img/logo.png'}" />	
+			<link rel="shortcut icon" sizes="196x196" th:href="${links.cdn + '/theme/' + theme_ + '/img/logo.png'}" />
+			<link rel="shortcut icon" sizes="128x128" th:href="${links.cdn + '/theme/' + theme_ + '/img/logo.png'}" />
 		</th:block>
 	
 	
@@ -47,13 +46,14 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 		<script type="text/javascript" th:src="@{${links.cdn + '/js/jquery.selectric.min.js'}}"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>		 
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" ></script>		 
 
 		<script type="text/javascript" th:src="${links.cdn + '/js/browser.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/util.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/utilx.js'}"></script>		
-		<script type="text/javascript" th:src="${links.cdn + '/js/math.min.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/templates.js'}"></script>
+		<script type="text/javascript" th:src="${links.cdn + '/js/bind.js'}"></script>
+		<script type="text/javascript" th:src="${links.cdn + '/js/html.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/multi-input.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/multi-input-util.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/alert.js'}"></script>
@@ -63,8 +63,6 @@
 		<script type="text/javascript" th:src="${links.cdn + '/js/select-state.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/multi-selectx.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/popoverx.js'}"></script>
-		<script type="text/javascript" th:src="${links.cdn + '/js/notifications.js'}"></script>
-		<script type="text/javascript" th:src="${links.cdn + '/js/notifications2.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/pager.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/upload.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/password.js'}"></script>
@@ -74,15 +72,23 @@
 		<script type="text/javascript" th:src="${links.cdn + '/js/table.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/search.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/clipboard.js'}"></script>
-		<script type="text/javascript" th:src="${links.cdn + '/js/croppie.js'}"></script>
-		<script type="text/javascript" th:src="${links.cdn + '/js/ui.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/wait.js'}"></script>
 		<script type="text/javascript" th:src="${links.cdn + '/js/social.js'}"></script>
+		<script type="text/javascript" th:src="${links.cdn + '/js/editor.js'}"></script>
 
+		<th:block th:if="${principal!=null}">
+			<script type="text/javascript" th:src="${links.cdn + '/js/sockjs/sockjs-1.4.0/sockjs.min.js'}"></script>
+			<script type="text/javascript" th:src="${links.cdn + '/js/stomp/stomp-2.3.3.min.js'}"></script>
+			<script type="text/javascript" th:src="${links.cdn + '/js/ws.js'}"></script>
+			<script type="text/javascript" th:src="${links.cdn + '/js/notifications.js'}"></script>
+			<script type="text/javascript" th:src="${links.cdn + '/js/notifications2.js'}"></script>
+		</th:block>
 <script>
 $(function() {
 	$('.select').selectricx({});
 	$(".info").popoverx({});
+	//if (typeof $ws!='undefined') $ws.autoconnect({}, true);
+
 });
 </script>
 </head>

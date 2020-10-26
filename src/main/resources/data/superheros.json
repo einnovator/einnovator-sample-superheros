@@ -3,67 +3,67 @@
         "name": "Spider-Man",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png",
+        "avatar": "https://cdn.einnovator.org/img/superheros/spiderman.png",
         "description" : "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko. He first appeared in the anthology comic book Amazing Fantasy N.15 (August 1962) in the Silver Age of Comic Books."
     },
     {
         "name": "Hulk",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_%28comics_character%29.png"
+        "avatar": "https://cdn.einnovator.org/img/superheros/hulk.png"
     },
     {
         "name": "Iron Man",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/ironman.jpg"
     },
     {
         "name": "Thor",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/4/41/Thor-272.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/thor.jpg"
     },
     {
         "name": "Captain America",
         "squad": "MARVEL",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/91/CaptainAmerica109.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/captain-america.jpg"
     },
     {
         "name": "Superman ",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/eb/SupermanRoss.png"
+        "avatar": "https://cdn.einnovator.org/img/superheros/superman.png"
     },
     {
         "name": "Batman",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/8/87/Batman_DC_Comics.png"
+        "avatar": "https://cdn.einnovator.org/img/superheros/batman.png"
     },
     {
         "name": "Wonder Woman",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/93/Wonder_Woman.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/wonder-woman.jpg"
     },
     {
         "name": "Flash",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/e/ed/The_Flash_Family.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/flash.jpg"
     },
     {
         "name": "Green Lantern",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/8/80/Green_Lantern_Rebirth_6.jpg"
+        "avatar": "https://cdn.einnovator.org/img/superheros/green-lantern.jpg"
     },
     {
         "name": "Aquaman",
         "squad": "DC",
         "villain": "false",
-        "avatar": "https://upload.wikimedia.org/wikipedia/en/9/9d/Aquaman_Rebirth_1.png"
+        "avatar": "https://cdn.einnovator.org/img/superheros/aquaman.png"
     }
 ]
