@@ -19,7 +19,6 @@ import org.einnovator.sample.superheros.model.Squad;
 import org.einnovator.sample.superheros.model.Superhero;
 import org.einnovator.sample.superheros.modelx.SuperheroFilter;
 import org.einnovator.sample.superheros.repository.SuperheroRepository;
-import org.einnovator.social.client.config.SocialClientConfig;
 import org.einnovator.social.client.config.SocialClientConfiguration;
 import org.einnovator.social.client.manager.ChannelManager;
 import org.einnovator.social.client.model.Channel;

@@ -53,6 +53,8 @@ sso:
   server : https://sso.einnovator.org
   client-id: application
   client-secret: application$123
+  ignoreInclude: >
+    /, /superhero, /superhero/**, /api/superhero, /api/superhero/**
   registration:
     auto: true
     roles:
@@ -124,7 +126,7 @@ ui:
   links:
     cdn: https://cdn.einnovator.org
     sso: https://sso.einnovator.org
-    notifications: http://notifications.einnovator.org
+    notifications: https://notifications.einnovator.org
 
 ---
 
