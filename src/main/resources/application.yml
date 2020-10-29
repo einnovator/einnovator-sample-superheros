@@ -10,8 +10,8 @@ server:
       
 spring:
   datasource:
-    url: "jdbc:hsqldb:file:/data/hsqldb/movies"
-    name: movies
+    url: "jdbc:hsqldb:file:/data/hsqldb/superheros"
+    name: superheros
     username: ""
     password: ""
     driver-class-name: ""
@@ -150,39 +150,6 @@ ui:
     sso: https://sso.samples.sandbox.nativex.cloud
     notifications: https://notifications.samples.sandbox.nativex.cloud
   
----
-
-spring:
-  profiles: local
-  datasource:
-    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
-    password: jsimao
-  rabbitmq:
-    host : "localhost"
-    port : 5672
-    username : app
-    password : "app123!"
-    virtualHost: vh
-
-sso:
-  server : http://localhost:2000
-  client-id: application
-  client-secret: application$123
-
-notifications:
-  server: http://localhost:2010
-
-documents:
-  server: http://localhost:2020
-  
-social:
-  server: http://localhost:2050
-  
-ui:
-  links:
-    cdn: http://localhost:1900
-    sso: http://localhost:2000
-    notifications: http://localhost:2010
 
 ---
 
@@ -350,11 +317,45 @@ spring:
   profiles: mysql
   datasource:
     #url: "jdbc:mysql://*****/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
-    url: "jdbc:hsqldb:file:/data/hsqldb/superheros"
     name: superheros
     username: "root"
     password: ""
     driver-class-name: com.mysql.jdbc.Driver    
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
+    
+---
+
+spring:
+  profiles: local
+  datasource:
+    url: "jdbc:mysql://localhost/superheros?verifyServerCertificate=false&useSSL=true&reconnect=true"
+    password: jsimao
+  rabbitmq:
+    host : "localhost"
+    port : 5672
+    username : app
+    password : "app123!"
+    virtualHost: vh
+
+sso:
+  server : http://localhost:2000
+  client-id: application
+  client-secret: application$123
+
+notifications:
+  server: http://localhost:2010
+
+documents:
+  server: http://localhost:2020
+  
+social:
+  server: http://localhost:2050
+  
+ui:
+  links:
+    cdn: http://localhost:1900
+    sso: http://localhost:2000
+    notifications: http://localhost:2010
+
     
